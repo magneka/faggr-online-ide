@@ -14,6 +14,7 @@ export default function App() {
       )
       .then(result => {
         console.log(result.data);        
+        setUsers(result.data)
       })
       .catch(error => {
         console.error("error: ", error);        
@@ -27,6 +28,14 @@ export default function App() {
       <button onClick={getData}>
         Go Replit!
       </button>
+
+       <div>
+        <ul>
+          {            
+            users.map((item, i) => <li>Test</li>)            
+          }
+        </ul>
+      </div>
 
     </div>
   );
