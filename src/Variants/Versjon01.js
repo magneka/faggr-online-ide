@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import axios from "axios"
 import "./style.css";
 
@@ -6,14 +6,12 @@ import "./style.css";
 
 export default function App() {
 
-  const [users, setUsers] = useState([])
-
   const getData = () => {      
       axios.get(
-        `https://replitExpress.magneka.repl.co/users`
+        `https://ReplitExpress.magneka.repl.co`
       )
       .then(result => {
-        console.log(result.data);        
+        console.log(result);        
       })
       .catch(error => {
         console.error("error: ", error);        
@@ -23,10 +21,11 @@ export default function App() {
   return (
     <div>
       <h1>Hello Ulriken consulting!</h1>
+      <p>Start editing to see some magic happen :)</p>
 
-      <button onClick={getData}>
-        Go Replit!
-      </button>
+    <button onClick={getData}>
+      Click me!
+    </button>
 
     </div>
   );

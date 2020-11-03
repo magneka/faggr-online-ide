@@ -13,7 +13,7 @@ export default function App() {
         `https://replitExpress.magneka.repl.co/users`
       )
       .then(result => {
-        console.log(result.data);        
+        console.log(result);        
       })
       .catch(error => {
         console.error("error: ", error);        
@@ -23,10 +23,11 @@ export default function App() {
   return (
     <div>
       <h1>Hello Ulriken consulting!</h1>
+      <p>Start editing to see some magic happen :)</p>
 
-      <button onClick={getData}>
-        Go Replit!
-      </button>
+    <button onClick={getData}>
+      Go Replit!
+    </button>
 
     </div>
   );
