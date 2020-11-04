@@ -23,7 +23,7 @@ export const useAxios = () => {
       case actions.DATA:
         return {
           loading: false,
-          data: [...action.data],
+          data:  {result: action.data},
           error: false
         };
       case actions.ERROR:
@@ -39,7 +39,7 @@ export const useAxios = () => {
   }
 
   const initialState = {
-    data: [],
+    data: {result: []},
     loading: false,
     error: false
   }  

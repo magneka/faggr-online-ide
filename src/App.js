@@ -21,7 +21,7 @@ export default function App() {
       </button>     
 
       <div>{!state.loading && (<ul>
-          {state.data.map((item, i) => 
+          {state.data.result.map((item, i) => 
             <li>{item.lastname}, {item.firstname}</li>)            
           }
         </ul>
