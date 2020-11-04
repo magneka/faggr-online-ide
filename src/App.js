@@ -22,7 +22,7 @@ export default function App() {
 
       <div>{!state.loading && (<ul>
           {state.data.result.map((item, i) => 
-            <li>{item.lastname}, {item.firstname}</li>)            
+            <li  key={i}>{item.lastname}, {item.firstname}</li>)            
           }
         </ul>
       )}</div>
